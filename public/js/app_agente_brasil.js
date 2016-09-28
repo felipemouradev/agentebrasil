@@ -237,7 +237,7 @@ $(document).ready(function() {
     });
 
     var montaModalAtualizaCliente = function(values){
-
+        console.log(values);
         html = "";
         html += '<div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="modalClienteLabel">';
         html += '<div class="modal-dialog" role="document">';
@@ -253,7 +253,7 @@ $(document).ready(function() {
         '</div>';
         html += '<div class="modal-footer">';
         html += '<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>';
-        html += '<button type="button" class="btn btn-success btnAction updateCliente" data-cliente_id ="'+values.id+'">Atualizar</button>';
+        html += '<button type="button" class="btn btn-success btnAction updateCliente" data-cliente_id ="'+values.clientes_id+'">Atualizar</button>';
         html += '</div>';
         html += '</div>';
         html += '</div>';
