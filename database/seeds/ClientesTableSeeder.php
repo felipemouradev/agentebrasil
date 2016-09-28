@@ -48,6 +48,8 @@ class ClientesTableSeeder extends Seeder
         		), 
         		'logradouro'=>$faker->streetName,
 				'cep'=>$faker->postcode,
+                'estado'=>$faker->state,
+                'cidade'=>$faker->city,
 				'bairro'=>$faker->name,
 				'numero'=>rand(1,5000),
 				'complemento'=>$faker->text(99),

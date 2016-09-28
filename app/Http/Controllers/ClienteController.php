@@ -33,4 +33,25 @@ class ClienteController extends Controller
         $moreInfo = (new Cliente())->informacoesCliente($cliente_id);
         return response()->json($moreInfo,200);
     }
+
+    public function salvaNovoCliente(Request $request){
+        $data = $request->all();
+        $save = (new Cliente())->salvaCliente($data);
+        return $save == true ?
+            response()->json(['message'=>'Salvo com sucesso'],200) :
+            response()->json(['message'=>'Houve um problema ao salvar'],400);
+    }
+
+    public function maisInformacoesClientePopulaModalUpdate($cliente_id){
+        $moreInfo = (new Cliente())->informacoesClienteTotal($cliente_id);
+        return response()->json($moreInfo,200);
+    }
+
+    public function atualizaCliente(Request $request,$cliente_id){
+        $data = $request->all();
+        $update = (new Cliente())->atualizaCliente($data,$cliente_id);
+        return $update == true ?
+            response()->json(['message'=>'Atualizado com sucesso'],200) :
+            response()->json(['message'=>'Houve um problema ao atualizar'],400);
+    }
 }
