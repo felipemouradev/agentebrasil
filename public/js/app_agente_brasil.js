@@ -206,7 +206,6 @@ $(document).ready(function() {
     };
 
     var montaHTMLCamposDisponiveisSave = function(values){
-        console.log(camposDisponiveis);
         html = '';
         camposDisponiveis.forEach(function (item,index) {
             html += '<div class="form-group '+item.name+'">';
@@ -237,7 +236,6 @@ $(document).ready(function() {
     });
 
     var montaModalAtualizaCliente = function(values){
-        console.log(values);
         html = "";
         html += '<div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="modalClienteLabel">';
         html += '<div class="modal-dialog" role="document">';
